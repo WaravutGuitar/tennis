@@ -1,16 +1,23 @@
-function Tennis(){
-  this.start = function() {
-
-  };
-  this.echo = function() {
-    return 'Love - Love';
+function fizzbuzz(number){
+  if(number%3 === 0 ){
+      return 'Fizz';
   }
+  else if(number%5 === 0 ){
+      return 'Buzz';
+  }
+
 }
 
-describe('Tennis game', function(){
-  it('should echo "Love - Love" when starting the game', function(){
-    var tennis = new Tennis();
-    tennis.start();
-    expect(tennis.echo()).toEqual('Love - Love');
-  })
-})
+describe("fizzbuzz()", function(){
+
+  it('should be "Fizz" when I put 3' , function() {
+    var str = fizzbuzz(3);
+    expect(str).toEqual('Fizz');
+  });
+
+  it('should be "Buzz" when I put 5' , function() {
+    var str = fizzbuzz(5);
+    expect(str).toEqual('Buzz');
+  });
+
+});
