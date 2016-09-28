@@ -16,6 +16,10 @@ function Tennis(){
     if(scoreA === 30){
       scoreA = 40;
     }
+    if(scoreA === 40){
+      return 'player A won';
+    }
+
   }
   this.echo = function() {
     if(scoreA === 0 && scoreB === 0){
@@ -27,6 +31,7 @@ function Tennis(){
     if(scoreA === 30 && scoreB === 0){
       return 'Thirty - Love';
     }
+ }
 }
 
 
@@ -37,4 +42,4 @@ describe('Tennis game', function(){
     expect(tennis.echo()).toEqual('Love - Love');
   })
 
-})
+});
