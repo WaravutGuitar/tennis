@@ -10,13 +10,18 @@ function Tennis(){
     if(scoreA === 0){
       scoreA = 15;
     }
+    if(scoreA === 15){
+    scoreA = 30;
+    }
   }
   this.echo = function() {
     if(scoreA === 0 && scoreB === 0){
     return 'Love - Love';
     }
+    if(scoreA === 15 && scoreB === 0){
+    return 'Fifteen - Love';
+    }
   }
-
 }
 
 
