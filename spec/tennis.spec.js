@@ -17,7 +17,7 @@ function Tennis(){
       scoreA = 40;
     }
     if(scoreA === 40){
-      return 'player A won';
+      scoreA = 50;
     }
 
   }
@@ -33,6 +33,9 @@ function Tennis(){
     }
     if(scoreA === 40 && scoreB === 0){
       return 'Forty - Love';
+    }
+    if(scoreA > 40 && scoreB === 0){
+      return 'player A won';
     }
  }
 }
