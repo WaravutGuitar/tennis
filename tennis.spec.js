@@ -49,6 +49,9 @@ function Tennis(){
    else if(scoreA === 0 && scoreB > 40){
      return 'player B won';
    }
+   else if(scoreA === 15 && scoreB === 15){
+    return 'Fifteen - Fifteen';
+    }
  }
 }
 
