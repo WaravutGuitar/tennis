@@ -18,6 +18,8 @@ function Tennis(){
    else if(scoreB === 40){
       scoreB = 50;
     }
+
+  }
   this.scoreA = function() {
     if(scoreA === 0){
       scoreA = 15;
@@ -34,11 +36,6 @@ function Tennis(){
 
   }
 
-
-
-
-
-  }
   this.echo = function() {
     if(scoreA === 0 && scoreB === 0){
       return 'Love - Love';
