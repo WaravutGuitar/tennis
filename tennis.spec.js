@@ -5,7 +5,19 @@ function Tennis(){
       scoreA = 0;
       scoreB = 0;
   };
-
+  this.scoreB = function() {
+    if(scoreB === 0){
+      scoreB = 15;
+    }
+    else if(scoreB === 15){
+    scoreB = 30;
+   }
+  else if(scoreB === 30){
+     scoreB = 40;
+   }
+   else if(scoreB === 40){
+      scoreB = 50;
+    }
   this.scoreA = function() {
     if(scoreA === 0){
       scoreA = 15;
@@ -21,19 +33,7 @@ function Tennis(){
     }
 
   }
-  this.scoreB = function() {
-    if(scoreB === 0){
-      scoreB = 15;
-    }
-    else if(scoreB === 15){
-    scoreB = 30;
-   }
-  else if(scoreB === 30){
-     scoreB = 40;
-   }
-   else if(scoreB === 40){
-      scoreB = 50;
-    }
+
 
 
 
@@ -69,6 +69,9 @@ function Tennis(){
    }
    else if(scoreA === 15 && scoreB === 15){
     return 'Fifteen - Fifteen';
+    }
+    else if(scoreA === 30 && scoreB === 15){
+    return 'Thirty - Fifteen';
     }
  }
 }
