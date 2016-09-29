@@ -43,6 +43,9 @@ function Tennis(){
     else if(scoreA === 0 && scoreB === 30){
    return 'Love - Thirty';
    }
+   else if(scoreA === 0 && scoreB > 40){
+     return 'player B won';
+   }
  }
 }
 
@@ -60,6 +63,10 @@ describe('Tennis game', function(){
   it('should echo "Thirty - Love" when starting the game', function(){
     tennis.scoreA();
     expect(tennis.echo()).toEqual('Thirty - Love');
+  })
+  it('should echo "Forty - Love" when starting the game', function(){
+    tennis.scoreA();
+    expect(tennis.echo()).toEqual('Forty - Love');
   })
   it('should echo "Forty - Love" when starting the game', function(){
     tennis.scoreA();
