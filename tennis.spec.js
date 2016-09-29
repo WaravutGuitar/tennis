@@ -5,21 +5,7 @@ function Tennis(){
       scoreA = 0;
       scoreB = 0;
   };
-  this.scoreB = function() {
-    if(scoreB === 0){
-      scoreB = 15;
-    }
-    else if(scoreB === 15){
-    scoreB = 30;
-   }
-  else if(scoreB === 30){
-     scoreB = 40;
-   }
-   else if(scoreB === 40){
-      scoreB = 50;
-    }
 
-  }
   this.scoreA = function() {
     if(scoreA === 0){
       scoreA = 15;
@@ -32,6 +18,21 @@ function Tennis(){
     }
     else if(scoreA === 40){
       scoreA = 50;
+    }
+
+  }
+  this.scoreB = function() {
+    if(scoreB === 0){
+      scoreB = 15;
+    }
+    else if(scoreB === 15){
+    scoreB = 30;
+   }
+  else if(scoreB === 30){
+     scoreB = 40;
+   }
+   else if(scoreB === 40){
+      scoreB = 50;
     }
 
   }
@@ -50,6 +51,7 @@ function Tennis(){
       return 'Forty - Love';
     }
     else if(scoreA > 40 && scoreB === 0){
+      scoreA === 0;
       return 'player A won';
     }
     else if(scoreA === 0 && scoreB === 15){
@@ -62,6 +64,7 @@ function Tennis(){
     return 'Love - Forty';
     }
    else if(scoreA === 0 && scoreB > 40){
+     scoreB === 0;
      return 'player B won';
    }
    else if(scoreA === 15 && scoreB === 15){
@@ -76,10 +79,7 @@ function Tennis(){
 
 describe('Tennis game', function(){
     var tennis = new Tennis();
-    it('should echo "Love - Fifteen" when starting the game', function(){
-          tennis.scoreB();
-          expect(tennis.echo()).toEqual('Love - Fifteen');
-    })
+
   it('should echo "Love - Love" when starting the game', function(){
     tennis.start();
     expect(tennis.echo()).toEqual('Love - Love');
@@ -99,6 +99,10 @@ describe('Tennis game', function(){
   it('should echo "player A won" when starting the game', function(){
     tennis.scoreA();
     expect(tennis.echo()).toEqual('player A won');
+  })
+  it('should echo "Love - Fifteen" when starting the game', function(){
+        tennis.scoreB();
+        expect(tennis.echo()).toEqual('Love - Fifteen');
   })
 
 
