@@ -111,7 +111,11 @@ describe('Tennis game', function(){
   it('should echo "Love - Forty" when starting the game', function(){
         tennis.scoreB();
         expect(tennis.echo()).toEqual('Love - Forty');
-      })
+  })
+  it('should echo "player B won" when starting the game', function(){
+        tennis.scoreB();
+        expect(tennis.echo()).toEqual('player B won');
+  })
 
 
 
