@@ -41,6 +41,12 @@ function Tennis(){
     if(scoreA === 0 && scoreB === 0){
       return 'Love - Love';
     }
+    else if(scoreA === 15 && scoreB === 15){
+     return 'Fifteen - Fifteen';
+     }
+     else if(scoreA === 30 && scoreB === 15){
+     return 'Thirty - Fifteen';
+     }
     else if(scoreA === 15 && scoreB === 0){
       return 'Fifteen - Love';
     }
@@ -67,12 +73,7 @@ function Tennis(){
      scoreB = 0;
      return 'player B won';
    }
-   else if(scoreA === 15 && scoreB === 15){
-    return 'Fifteen - Fifteen';
-    }
-    else if(scoreA === 30 && scoreB === 15){
-    return 'Thirty - Fifteen';
-    }
+
  }
 }
 
