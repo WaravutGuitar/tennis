@@ -32,7 +32,7 @@ function Tennis(){
      scoreB = 40;
    }
    else if(scoreB === 40){
-      return 'player B won';
+      scoreB = 50;
     }
 
 
