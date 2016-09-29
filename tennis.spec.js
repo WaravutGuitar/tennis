@@ -76,6 +76,10 @@ function Tennis(){
 
 describe('Tennis game', function(){
     var tennis = new Tennis();
+    it('should echo "Love - Fifteen" when starting the game', function(){
+          tennis.scoreB();
+          expect(tennis.echo()).toEqual('Love - Fifteen');
+    })
   it('should echo "Love - Love" when starting the game', function(){
     tennis.start();
     expect(tennis.echo()).toEqual('Love - Love');
@@ -96,9 +100,7 @@ describe('Tennis game', function(){
     tennis.scoreA();
     expect(tennis.echo()).toEqual('player A won');
   })
-  it('should echo "Love - Fifteen" when starting the game', function(){
-        tennis.scoreB();
-        expect(tennis.echo()).toEqual('Love - Fifteen');
-  })
+
+
 
 });
