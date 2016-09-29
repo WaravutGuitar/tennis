@@ -28,6 +28,10 @@ function Tennis(){
     else if(scoreB === 15){
     scoreB = 30;
   }
+  else if(scoreB === 30){
+     scoreB = 40;
+   }
+
 
 
 
