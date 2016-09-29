@@ -104,6 +104,10 @@ describe('Tennis game', function(){
         tennis.scoreB();
         expect(tennis.echo()).toEqual('Love - Fifteen');
   })
+  it('should echo "Love - Thirty" when starting the game', function(){
+        tennis.scoreB();
+        expect(tennis.echo()).toEqual('Love - Thirty');
+  })
 
 
 
